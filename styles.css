@@ -1,2 +1,155 @@
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.home{
+   position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./media/images/background/background1.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+}
+.overlay{
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    
+}
+.home-content{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.menu-header{
+  display: block; 
+}
+.menu-header img{
+    width: 7.5%;
+    float: left;
+    margin-left: 5%;
+  
+
+}
+.menu-header ul{
+    width: 50%;
+    list-style-type: none;
+    float: right;
+    
+ 
+
+}
+.menu-header ul li{
+ 
+   display: inline-block;
+   padding: 0% 1%;
+   cursor: pointer;
+   text-transform: capitalize;
+   
+}
+.menu-header >ul> li.active::after,
+.menu-header >ul>li::after
+{
+    content: "";
+    width: 0;
+    display: block;
+    background-color: rgb(25, 59, 160);
+    height: 4px;
+    transition: 0.5s;
+}
+.menu-header >ul>li.active::after,
+.menu-header >ul>li:hover::after{
+  width: 100%;
+}
+
+.dropdown{
+    
+  position: relative;
+  display:block;
+    
+}
+.dropdown-menu{
+
+  display: none;
+  position: absolute;
+  background-color: #000;
+  text-align: center;
+
+  min-width: 0%;
+  top: 100%;
+  left: -100%;
+  padding: 0px 2px;
+  z-index: 1;
+  vertical-align: middle;
+  transition:  1s;
+}
+.dropdown-menu li{
+   width: 100%;
+   height: 5vh;
+   margin: 2% 0%;
+   display: block;
+   padding-top: 80px;
+   text-transform: uppercase;
+   font-size: 1rem;
+   
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  min-width: 350%;
+}
+
+.dropdown-menu li:hover{
+background-color: rgb(25, 59, 160); 
+color: white;
+}
+
+#home-content-title,p,.home-buttons,.menu-header{
+    color:white ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#home-content-title{
+    font-size: 3rem;
+    text-transform: uppercase;
+
+}
+
+.home-content >p{
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.home-buttons{
+    width: 20%;
+    padding: 1.5% 0%;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 0% 0.5%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+.home-buttons:hover{
+    opacity: 0.7;
+}
+
+#start-btn{
+   background-color: white;
+   color: black;
+}
+#learn-btn{
+background-color: rgb(25, 59, 160);
+color: white;
+}
+
+
+
+
+
+
 
 
