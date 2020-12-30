@@ -3,6 +3,31 @@ html{
     padding: 0;
     overflow-x: hidden;
 }
+.generalsection{
+    padding:120px 0;
+    box-shadow: 13px #868F9B;
+}
+
+.general-section-header
+{
+    text-align: center;
+}
+.general-section-header-text{
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 1%;
+}
+hr{
+   margin: 0 auto;
+    display:block;
+    width: 40px;
+    height: 2px;
+    
+    background-color: #6195FF;
+}
 .home{
    position: relative;
     width: 100vw;
@@ -57,7 +82,7 @@ html{
     content: "";
     width: 0;
     display: block;
-    background-color: rgb(25, 59, 160);
+    background-color: #6195FF;
     height: 4px;
     transition: 0.5s;
 }
@@ -103,13 +128,13 @@ html{
 }
 
 .dropdown-menu li:hover{
-background-color: rgb(25, 59, 160); 
+background-color: #6195FF; 
 color: white;
 }
 
-#home-content-title,p,.home-buttons,.menu-header{
+#home-content-title,p,.home-buttons,.menu-header,.overlay-subtitle{
     color:white ;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #home-content-title{
     font-size: 3rem;
@@ -142,14 +167,188 @@ color: white;
    color: black;
 }
 #learn-btn{
-background-color: rgb(25, 59, 160);
+background-color: #6195FF;
 color: white;
 }
 
+.cards-container{
+    width: 95%;
+    margin: 5% auto 1%;
 
 
+    
+}
+.card-item{
+    position: relative;
+    display: inline-block;
+    width:27%;
+    padding: 3% 1%;
+    text-align: center;
+    border:0.5px solid rgb(231, 237, 245);
+   
+}
+.card-item-overlay{
+    background-color: rgb(0, 0, 0);
+     z-index: -2;
+    position: absolute;
+    width: 0%;
+    top:0;
+    bottom: 0;
+    left: 0;
+ right: 0;
+ transition: width 0.75s;
+   
+}
+.card-item:hover .card-item-overlay{
+   width:100%;
+}
+.card-item:hover .card-title{
+    color: white;
+}
+.mg-right{
+    margin-right: 2.5%;
+    margin-left:2.72% ;
+}
+.mg-left{
+    margin-left: 2.5%;
+    margin-right: 2.72%;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2%;
+    color: black;
+    width:90%;
+    margin:0 auto 2% auto ;
+    transition: color .75s;
+    
+    
+    
+}
+
+.card-description{
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    padding: 0% 10%;
+    letter-spacing: 1px;
+    color: #868F9B;
+    margin-bottom: 7%;
+}
 
 
+.card-icon{
+    color: #6195FF;
+    margin-bottom: 2%;
+}
 
+.card-item>a{
+  color: #6195FF;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+#portofolio{
+    background-color: #FAFAFA ;
+}
+
+.image-card-item{
+    position: relative;
+    display: inline-block;
+    width:22.5%;
+    padding: 2% 2%;
+
+    text-align: center;
+    margin:0% 0%
+}
+.mg-l2{
+    margin-left: 9%;
+}
+.mg-r2{
+    margin-right:9% ;
+}
+.card-image{
+    width: 100%;
+    margin: auto;
+
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    visibility: hidden;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+   
+ 
+}
+ span{
+ display: block;
+}
+.overlay-content{
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+   transition: top  0.6s ;
+  
+}
+.overlay-title{
+   
+
+    color: #6195FF;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin:2% auto ;
+     opacity: 0;
+    transition: opacity 0.1s,
+
+    
+}
+.overlay-subtitle{
+ 
+    font-weight: 700;
+    font-size: 1.255rem;
+    opacity: 0;
+    transition: opacity 0.5s,
+}
+.overlay-content-link{
+    margin: 6% auto 0% auto;
+    text-align: center;
+    width: 100%;
+      opacity: 0;
+    transition: opacity 0.7s,
+}
+.overlay-links{
+    display: inline-block;
+    width:15%;
+    height: 50px;
+    background-color: #6195FF;
+   line-height: 50px;
+   
+    
+}
+i{
+    display: block;
+    margin: 0% auto;
+}
+
+.image-card-item:hover .overlay{
+    visibility: visible;
+}
+
+.image-card-item:hover .overlay-content{
+    top:50%;
+  
+}
+.image-card-item:hover .overlay-title,.overlay-subtitle,.overlay-content-link{
+    opacity:1;
+}
 
