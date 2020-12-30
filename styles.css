@@ -37,7 +37,7 @@ hr{
     background-attachment: fixed;
   
 }
-.overlay{
+.homeoverlay{
     height: inherit;
     background-color: rgba(0, 0, 0, 0.8);
 
@@ -332,8 +332,12 @@ color: white;
     height: 50px;
     background-color: #6195FF;
    line-height: 50px;
+   transition: opacity .5s;
    
     
+}
+.overlay-links:hover{
+    opacity:0.7;
 }
 i{
     display: block;
