@@ -454,11 +454,11 @@ display: inline-block;
     position: absolute;
     background-color: #6195FF;
     color: white;
-    font-size: 1.5rem;
+ visibility: hidden;
     padding:2.5% 4%;
     border-radius: 20%;
     top: 50%;
-    opacity: 0;
+
     transform: translate(0%,-50%);
     transition: opacity .5s;
 }
@@ -471,12 +471,174 @@ display: inline-block;
     right: 0%;
 }
 
+.arrows span{
+        font-size: 1rem;
+    font-weight: 1900;
+}
+
 .right-content:hover .arrows{
- display: auto;   
- opacity: 0.8;
+ visibility: visible;
+}
+.arrows:hover{
+    opacity: 0.8;
 }
 .arrows, .bullet-item{
     cursor: pointer;
 }
+
+#statistics{   position: relative;  
+    vertical-align: middle;
+    width: 100%;
+    background-image: url('./media/images/background/background2.webp');
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    z-index: -2;
+}
+
+.statistics-overlay{
+    position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+    top:0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  z-index: -1;
+}
+
+.statistics-content{
+    padding: 0% 10%;
+  
+    margin: 0% auto;
+    width: 70%;
+    height: 10vh;
+   
+       
+}
+.statistics-item{
+    padding: 0% 1%;
+    width: 23%;
+    float: left;
+    z-index: 4;
+}
+.statistics-item i{
+    color: #6195FF;
+    margin-bottom: 4%;
+}
+.statistics-item span{
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-bottom: 2%;
+}
+.statistics-item h3{
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+    margin: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#pricing{
+  padding-top: 5%;
+}
+#pricing .cards-container{
+    width: 90%;
+    margin: 2% auto;
+
+    text-align: center;
+}
+#pricing .card-item{
+   display: inline-block;
+    position: relative;
+    width: 27.5%;
+    height: 50vh;
+    overflow: hidden;
+    padding: 1% 0%;
+   
+
+}
+#pricing .card-titlee{
+    color: #868F9B;
+    margin: 2.5% auto;
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+#pricing .price{
+width:30%;    
+padding: 0% 0.5%;
+border-radius: 100%;
+border: 3px solid #6195FF;
+ margin: 5% auto;
+}
+.price h3{
+    margin: 25% 0% 5% 0%;
+    letter-spacing: -6px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.7rem;
+}
+.price span{
+    margin-bottom: 25%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+#pricing ul{
+    list-style: none;
+    display: block;
+    width: 75%;
+    font-size: 1.2rem;
+    margin: 7.5% auto;
+    padding: 0%;
+    font-weight: lighter;
+    color: #868F9B;
+    text-transform: capitalize;
+
+}
+#pricing ul li{
+    margin: 3% 0%;
+}
+#pricing button{
+    background-color: transparent;
+    border: 2px solid #6195FF;
+    width: 50%;
+    padding: 2% 0%;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #6195FF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    margin-top: 1%;
+
+}
+.price-overlay{
+  position: absolute;
+  background-color: black;
+    top:0%;
+    height:0vh;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: height .2s;
+
+}
+
+#pricing .card-item:hover .price-overlay{
+    height: 100%;
+}
+
+#pricing .card-item:hover .price  h3,#pricing .card-item:hover .price span{
+color: white;
+}
+#pricing .card-item:hover  .card-titlee{
+color: #6195FF;
+
+}
+
+
+
+
+
 
 
