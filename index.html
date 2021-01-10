@@ -15,18 +15,18 @@
     <div id="top" class="totop">
             <i id="topicon" class="fas fa-sort-up fa-3x"></i>
     </div>    
-    <div class="pos-rel w-100vw h-100vh bck-img-default ">
+    <div id="header" class="pos-rel w-100vw h-100vh bck-img-default ">
         <div class="homeoverlay h-100vh ">
             <div id="nav" class="menu-header  .disp-blck">
                 <img id="nav-img" alt="logo"src="./media/images/logo-alt.webp">
                 <ul class="w-50prc flt-right col-primary">
-                    <li class=" disp-inblck hor-marg-2perc curs-point  .txt-align-cen  active pad-vert-1-25prc pad-hor-4prc">Home</li>
-                    <li class="disp-inblck hor-marg-2perc curs-point  .txt-align-cen pad-vert-1-25prc pad-hor-4prc">about</li>
-                    <li class="disp-inblck hor-marg-2perc curs-point .txt-align-cen pad-vert-1-25prc pad-hor-4prc">portofolio</li>
-                    <li class="disp-inblck hor-marg-2perc curs-point  .txt-align-cen pad-vert-1-25prc pad-hor-4prc">services</li>
-                    <li class="disp-inblck hor-marg-2perc curs-point  .txt-align-cen pad-vert-1-25prc pad-hor-4prc">prices</li>
-                    <li class="disp-inblck  hor-marg-2perc curs-point  .txt-align-cen  pad-vert-1-25prc pad-hor-4prc">team</li>
-                    <li class="dropdown  hor-marg-2perc curs-point .txt-align-cen">
+                    <li data-link="header" class="navlink  disp-inblck hor-marg-2perc curs-point  .txt-align-cen  active pad-vert-1-25prc pad-hor-4prc">Home</li>
+                    <li data-link="about" class="navlink disp-inblck hor-marg-2perc curs-point  .txt-align-cen pad-vert-1-25prc pad-hor-4prc">about</li>
+                    <li data-link="portofolio" class="navlink disp-inblck hor-marg-2perc curs-point .txt-align-cen pad-vert-1-25prc pad-hor-4prc">portofolio</li>
+                    <li data-link="offers" class="navlink disp-inblck hor-marg-2perc curs-point  .txt-align-cen pad-vert-1-25prc pad-hor-4prc">services</li>
+                    <li data-link="pricing" data-link=""class="navlink disp-inblck hor-marg-2perc curs-point  .txt-align-cen pad-vert-1-25prc pad-hor-4prc">prices</li>
+                    <li data-link="team" class="navlink disp-inblck  hor-marg-2perc curs-point  .txt-align-cen  pad-vert-1-25prc pad-hor-4prc">team</li>
+                    <li data-link="blogs" class="navlink dropdown  hor-marg-2perc curs-point .txt-align-cen">
                         blog
                       
                         <i class="fas fa-sort-up"></i>
@@ -35,7 +35,7 @@
                             <li>articles</li>
                         </ul>
                     </li>
-                    <li class="disp-inblck pad-vert-1-25prc curs-point pad-hor-4prc hor-marg-2perc .txt-align-cen"  >contact</li>
+                    <li data-link="contact" class=" navlink disp-inblck pad-vert-1-25prc curs-point pad-hor-4prc hor-marg-2perc .txt-align-cen"  >contact</li>
                 </ul>
             </div>
             <div class="pos-abs hero-img">
@@ -326,7 +326,7 @@
 
 
 <!--section why us....... --> 
-    <div class="generalsection" id="why-us">
+    <div class="general-section" id="why-us">
         <div class="left-content">
                 <h3 class="general-section-header-text">Why Choose Us</h3>
                 <hr/>
@@ -379,7 +379,7 @@
 
 
 <!--section statistics..... -->
-    <div class="generalsection" id="statistics">
+    <div class="general-section" id="statistics">
         <div class="statistics-overlay"></div>
         <div class="statistics-content">
             <div class="statistics-item">
@@ -409,7 +409,7 @@
 
 
 <!--section pricing..... -->
-    <div class="general-section" id="pricing">
+    <div class="generalsection" id="pricing">
         <div class="general-section-header">
             <h3 class="general-section-header-text"> pricing table</h3>
             <hr />
@@ -504,7 +504,7 @@
 
 
 <!--section team..... -->
-    <div class="general-section" id="team">
+    <div class="generalsection" id="team">
         <div class="general-section-header">
             <h3 class="general-section-header-text"> our team</h3>
             <hr />
@@ -549,7 +549,7 @@
 
 
 <!--section blogs..... -->
-    <div class="general-section" id="blogs">
+    <div class="generalsection" id="blogs">
             <div class="general-section-header">
                 <h3 class="general-section-header-text"> our team</h3>
                 <hr />
@@ -615,7 +615,7 @@
 
 
 <!--section contact..... -->
-    <div class="general-section" id="contact">
+    <div class="generalsection" id="contact">
         <div class="general-section-header">
                     <h3 class="general-section-header-text"> get in touch</h3>
                     <hr />
@@ -675,12 +675,19 @@
 <script type="text/javascript"> 
 var header=document.getElementById("nav"); 
 var totopcont=document.getElementById("top")
+var links=document.querySelectorAll(".navlink")
 
+
+
+var selectedindex=0;
 window.addEventListener("scroll",function(){ 
+ 
     if(window.scrollY<100){
     header.className =" menu-header disp-blck"
     document.getElementById("nav-img").src = "./media/images/logo-alt.webp";
     totopcont.style.display="none";
+    console.log("sad")
+ 
     }
     else{
         header.className += " sticky"
@@ -688,10 +695,21 @@ window.addEventListener("scroll",function(){
         totopcont.style.display="block";
     }
 }
-)
+);
 totopcont.addEventListener("click",function(){
     window.scrollTo({top:0,behavior:"smooth"});
-})
+});
+links.forEach(element => {
+   
+    element.addEventListener("click",function(){
+        const el=document.getElementById(element.getAttribute("data-link"))
+        el.scrollIntoView({behavior:"smooth",block:"start"})
+        document.getElementsByClassName("active")[0].classList.toggle("active");
+        element.classList.toggle("active")
+    })
+});
+
+
 </script>
 
 
