@@ -677,7 +677,15 @@ var header=document.getElementById("nav");
 var totopcont=document.getElementById("top")
 var links=document.querySelectorAll(".navlink")
 
-
+links.forEach(element => {
+   
+    element.addEventListener("click",function(){
+        const el=document.getElementById(element.getAttribute("data-link"))
+        el.scrollIntoView({behavior:"smooth",block:"start"})
+        document.getElementsByClassName("active")[0].classList.toggle("active");
+        element.classList.toggle("active")
+    })
+});
 
 var selectedindex=0;
 window.addEventListener("scroll",function(){ 
@@ -699,15 +707,7 @@ window.addEventListener("scroll",function(){
 totopcont.addEventListener("click",function(){
     window.scrollTo({top:0,behavior:"smooth"});
 });
-links.forEach(element => {
-   
-    element.addEventListener("click",function(){
-        const el=document.getElementById(element.getAttribute("data-link"))
-        el.scrollIntoView({behavior:"smooth",block:"start"})
-        document.getElementsByClassName("active")[0].classList.toggle("active");
-        element.classList.toggle("active")
-    })
-});
+
 
 
 </script>
