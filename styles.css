@@ -3,10 +3,16 @@
 
 .container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: minmax(100px,auto);
-    grid-column-gap: 5%;
-    grid-row-gap: 5%;
+    width: 100%;
+    grid-template-areas: 
+    "hd hd hd hd"
+    "nv cnt cnt cnt"
+    "nv cnt cnt cnt"
+    "as cnt cnt cnt"
+    "ft ft ft ft";
+    grid-gap: 15% 5% ;
+    text-align: center;
+  
 }
 
 
@@ -14,20 +20,25 @@
 
     background-color: black;
     color: blanchedalmond;
-    font-size: 1.2rem;
-    margin:1% 1%;
-    text-align: center;
-     padding: 2% 0%;     
-
-}
-#first{
-
-    grid-row-start: 1;
-    grid-row-end: 3;
+    font-size: 200 px;
+    padding:1% 5%;
+    
 }
 
-#fourth{
-    grid-column: 2/4;
+header{
+    grid-area: hd;
+}
+nav{
+    grid-area: nv;
+}
+aside{
+    grid-area:as;
+}
+#content{
+    grid-area: cnt;
+}
+footer{
+grid-area: ft;
 }
 
 
