@@ -10,9 +10,10 @@
 }
 body{
     
-    background-image: url('./media/images/background.jpg');
+    background-image: url('./media/images/n6FoCQ.png');
+
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 .grey-overlay{
     position: absolute;
@@ -20,7 +21,7 @@ body{
      bottom: 0;
      right: 0;
      left: 0;
-    opacity: 0.4;
+    opacity: 0;
     background-color: white;
     z-index: -1;
 
@@ -36,15 +37,17 @@ height: 16vh;
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
+    justify-content: space-around;}
+
 .right-container h1{
+    
      cursor: pointer;
     font-family: 'Oswald', sans-serif;
 }
 
 
 .log-nav{
+    
     display:flex;
     list-style: none;
     justify-content: space-between;
@@ -73,58 +76,91 @@ height: 16vh;
 .log-nav li .selected{
      color: rgb(230, 76, 140);
 }
+
+
+.log-nav li span{
+    font-size: 1.25rem;
+    font-weight: lighter;
+    
+}
+.log-nav li {
+    position: relative;
+}
+i{
+    height: 100%;
+}
+.cart-items{
+position: absolute;
+top: -40%;
+right: -40%;
+border-radius: 3rem;
+padding: 3% 5%;
+z-index: 2;
+background-color: white;
+color: black;
+}
 section{
+    width: 98%;
+    margin: 0% auto;
+    padding:1% 2%;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+section nav {
 display: flex;
-flex-direction: column;
-
+justify-content: space-around;
 align-items: center;
+}
 
+.sec-search{
+    display: flex;
+    align-items: center;
+}
+.sec-filters{
+       display: flex;
+       align-items: center;
+    
+}
+
+
+
+section nav h2{
+
+   font-size: 1.7rem;
+   font-family: 'PT Sans', sans-serif;
+   color: white;
+
+}
+
+section nav input[type="search"]{
+    max-width: 35vw;
+    background-color: transparent;
+    border-color: grey;
+    border-width: 0 0 1.5px 0;
+    border-style: solid;
+    padding:0.5% ;
+    color:white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.2rem;
+    
+}
+
+label{
+    
+  color:white;
+
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+  
   
 }
-h3{
-    text-align: center;
-     font-family: 'Oswald', sans-serif;
-     text-transform: capitalize;
-     font-size:1.5rem;
 
+label:nth-child(2){
+
+    margin-right: 6%;
 }
-form{
-    justify-self: center;
-    width: 60%;
-  margin: auto;
-  padding: 2% 2%;
 
 
-}
-
-input{
-    margin: 3% auto;
-    display: block;
-    min-width: 30vw;
-    padding: 1% 1.5%;
-    border-color: transparent;
-}
-input[type="submit"]{
-    background-color: transparent;
-    border: 3px solid black;
-    min-width: 20vw;
-    border-radius: 2.5%;
-    cursor: pointer;
-    text-transform: capitalize;
-    font-family: 'PT Sans', sans-serif;
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-input[type="submit"]:hover{
-    background-color: black;
-    color: white;
-}
-.error{
-    color: red;
-    text-align: center;
-    display: block;
-    margin: 0% auto;
-    font-family: 'PT Sans', sans-serif;
-}
 
 
