@@ -1,61 +1,111 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>SHOPYRIGHT Playstation Store</title>
-    <link rel="stylesheet" href="specstyles.css">
-    <link href="\media\fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <link rel="stylesheet" href="specstyles.css" />
+    <link
+      href="\media\fontawesome-free-5.15.1-web/css/all.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body>
-    <div class="grey-overlay">
-    </div>
+  <body>
+    <div class="grey-overlay"></div>
     <header>
-        <div class="container">
-            <div class="right-container">
-                <h1 class="brand" onclick="goToHomePage()"> SHOPYRIGHT</h1>
-            </div>
-            <nav class="left-container">
-                <ul class="log-nav">
-                    <li>
-                        <i class="fas fa-user fa-2x"></i>
-                        <span id="user"></span>
-                    </li>
-                    <li>
-                        <i class="fas fa-shopping-cart fa-2x"></i>
-                        <div class="cart-items">
-                            1
-                        </div>    
-                    </li>
-                </ul>
-            </nav>
+      <div class="container">
+        <div class="right-container">
+          <h1 class="brand" onclick="goToHomePage()">SHOPYRIGHT</h1>
         </div>
-    </header>
-    <section>
-        <nav>
-            <div class="sec-title">
-            <h2 id="sectitle">All</h2>
-            </div>
-            <div class="sec-search">
-               <input type="search" placeholder="Search here" value="">
-            </div>
-           <div class="sec-filters">
-                <input class="radios" type="radio" name="type" value="all" id="all"> 
-                <label for="all" >all</label>            
-                <input class="radios" type="radio" name="type" value="playstations" id="playstation" >
-                <label for="playstation">Playstation</label>
-           </div>      
+        <nav class="left-container">
+          <ul class="log-nav">
+            <li>
+              <i class="fas fa-user fa-2x"></i>
+              <span id="user"></span>
+            </li>
+            <li id="cart-hover">
+              <i class="fas fa-shopping-cart fa-2x"></i>
+              <div class="cart-items">1</div>
+            </li>
+          </ul>
+          
         </nav>
-        <div class="products-container">
-        
-      
-        </div>    
-    </section>    
+      </div>
+      <div class="cart-hoverlist">
+        <div class="cart-hoverlist-title">
+        <h3>My Cart</h3>
+        <hr>
+        </div>
+            <div class="cart-hoverlist-product-item">
+              <div class="cart-hoverlist-product-item-description">
+                <div class="cart-hoverlist-product-item-description-imgcont">
+                  <img
+                    src="https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/97/485551/1.jpg?3966"
+                  />
+                </div>
+                <div class="cart-hoverlist-product-item-description-texts">
+                  <h4 class="p-name">pgj gjghg ggjg 6gb</h4>
+                  <p>
+                    asfa f saf f asf fasfasfgeebfg hgfhhwg hkf
+                    trtgdggdhfhhfsd+dsggdsg
+                  </p>
+                  <div
+                    class="cart-hoverlist-product-item-description-purchasedetail"
+                  >
+                    <span> 750 LE </span>
+                    <div class="quantitychange">
+                      <span> Quantity: </span>
+                      <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        value="0"
+                        min="1"
+                        max="15"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr />
+            </div>
+            <div class="cart-hoverlist-panel">
+              <span> total price </span>
+              <br />
+              <span> 750 LE </span>
+              <br />
+              <button class="cart-hoverlist-panel-button">place Order</button>
+            </div>
+      </div>
+    </header>
 
-
-   
-</body>
- <script src="script.js"></script>
-    <script src="bundle.js"></script>
+    <section>
+      <nav>
+        <div class="sec-title">
+          <h2 id="sectitle">All</h2>
+        </div>
+        <div class="sec-search">
+          <input type="search" placeholder="Search here" value="" />
+        </div>
+        <div class="sec-filters">
+          <div class="custom-select">
+            <div class="custom-select__trigger">
+              <span>Tesla</span>
+              <span class="arrow">&#60;</span>
+            </div>
+            <div class="custom-options">
+              <span class="custom-option selected" data-value="tesla">
+                Tesla
+              </span>
+              <span class="custom-option" data-value="volvo">Volvo</span>
+              <span class="custom-option" data-value="mercedes">Mercedes</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="products-container"></div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+  <script src="bundle.js"></script>
 </html>

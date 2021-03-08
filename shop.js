@@ -1,6 +1,7 @@
 const data = require('./products.json');
 
 let productDom=document.querySelector(".products-container");
+
 console.log(productDom)
 OrganizeDataFromJson(data);
 
@@ -12,9 +13,7 @@ console.log(allCategeories)
 return showUiProducts(allCategeories,playstationArr,gamesArr);
 }
 function showUiProducts(allCat,playstationArr,gamesArr){
- 
-  let g= allCat.map(item=>{
-
+  let productsArray= allCat.map(item=>{
         return `<div class="products-card">
                      <img class="product-card-img"
                         src=${item.photoalbumurl[0]}
@@ -31,11 +30,12 @@ function showUiProducts(allCat,playstationArr,gamesArr){
                 </div>`
     })
 
-    g.forEach(element => {
-    productDom.innerHTML+=element;
-    console.log(element)      
+    productsArray.forEach(product => {
+    productDom.innerHTML+=product;
+    console.log(product)      
     });
-  
-    
-
 }
+
+
+
+

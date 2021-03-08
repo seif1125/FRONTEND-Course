@@ -13,6 +13,7 @@ body{
     background-image: url('./media/images/n6FoCQ.png');
     background-size: cover;
     background-repeat: repeat-y;
+    background-attachment: fixed;
 }
 .grey-overlay{
     position: absolute;
@@ -29,6 +30,7 @@ body{
 header{
 color: white;
 height: 16vh;
+position: relative;
 }
 .container{
     margin: 2% 0%;
@@ -103,7 +105,7 @@ section{
     margin: 0% auto;
     padding:1% 2%;
     border-radius: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(20, 20, 20, 0.9);
 }
 
 section nav {
@@ -172,7 +174,7 @@ label:nth-child(2){
 .products-card{
     position: relative;
     padding: 5% 0% ;
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     border-radius: 1rem;
     color: white;
     text-align: center;
@@ -257,6 +259,197 @@ del{
     color: black;
 }
 
+
+.cart-hoverlist{
+
+    position: absolute;
+    top:10.5vh;
+    right:0vw ;
+    background-color: rgba(0, 0, 0,1);
+    z-index: 1;
+    width: 40vw;
+    color: white;
+    display: flex;
+    flex-direction: column;   
+}
+.cart-hoverlist-title{
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 2% 0% 4%;
+}
+.cart-hoverlist-product-item{
+    position: relative;
+    padding: 2% 3%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.cart-hoverlist-product-item-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cart-hoverlist-product-item-description-imgcont{
+    width: 50%;
+}
+.cart-hoverlist-product-item-description-imgcont img{
+  width: 100%;
+  
+}
+.cart-hoverlist-product-item-description-texts{
+  margin-left: 5%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.cart-hoverlist-product-item-description-texts .p-name{
+
+    color: white;
+    font-size: 1.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 2%;
+}
+.cart-hoverlist-product-item-description-texts p{
+      color: rgb(228, 225, 235);
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cart-hoverlist-product-item-description-texts .cart-hoverlist-product-item-description-purchasedetail{
+
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 5%;
+    padding:2% 0% ;
+}
+.cart-hoverlist-product-item-description-purchasedetail>span{
+    font-size: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.cart-hoverlist-product-item-description-purchasedetail .quantitychange{
+    font-size: 1.4rem;
+    
+}
+.cart-hoverlist-product-item-description-purchasedetail .quantitychange input{
+    background-color: transparent;
+    outline: none;
+    border-color:transparent ;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: yellow;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.cart-hoverlist-panel{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom:2% ;
+}
+
+
+.cart-hoverlist-panel button{
+    width: 60%;
+    padding: 1.5% 0.5%;
+    margin: 1% 0%;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: white;
+    border: 1px solid silver;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.cart-hoverlist-panel button:hover{
+    background-color: yellow;
+    color: black;
+}
+
+
+
+
+.custom-select {
+     position: relative;
+    
+}
+ .custom-select__trigger {
+     position: relative; 
+    padding: 0 15px;
+     font-size: 20px;
+     font-weight: 300;
+     color: white;
+     background: transparent;
+     cursor: pointer;
+     border-width: 2px;
+     border-style: solid;
+     border-color: #fff;
+     text-align: center;
+}
+.arrow{
+   
+   display: inline-block;
+    transform: rotate(-90deg); 
+ 
+}
+ .custom-options {
+     display: none;
+     text-align: center;
+     position: absolute;
+     top: 100%;
+     left: 0;
+     right: 0;
+     border-top: 0;
+     background: #000;
+     transition: all 0.5s;
+     opacity: 1;
+     z-index: 2;
+     
+}
+
+ .custom-select.open .custom-options {
+     opacity: 1;
+     visibility: visible;
+     pointer-events: all;
+}
+ .custom-option {
+     position: relative;
+     display: block;
+     font-size: 22px;
+     font-weight: 300;
+     color: #fff;
+     line-height: 60px;
+     cursor: pointer;
+     transition: all 0.5s;
+}
+ .custom-option:hover {
+     cursor: pointer;
+     background-color: #b2b2b2;
+}
+ .custom-option.selected {
+     color: #ffffff;
+     background-color: #305c91;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
  @media only screen and (max-width: 600px){
      .products-container{
     display: grid;
@@ -265,8 +458,17 @@ del{
     grid-gap: 2%;
     text-align: center;
     overflow-y: scroll;
+    height: 80vh;
     
-}
+    }
+    .cart-hoverlist{
+       
+        top:11vh;
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+        left: 0;
+    }
 
 
  }
