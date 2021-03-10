@@ -1,9 +1,12 @@
-const data = require('./products.json');
+//const data = require('./products.json');
+let userDom=document.querySelector("#user");
+let username=window.location.href.substring(window.location.href.indexOf('?')+1,100).trim().replace("%20"," ");
+userDom.innerHTML=username;
 
 let productDom=document.querySelector(".products-container");
 
-console.log(productDom)
-OrganizeDataFromJson(data);
+console.log(productDom);
+//OrganizeDataFromJson(data);
 
 function OrganizeDataFromJson(){
 const playstationArr=data.playstation;

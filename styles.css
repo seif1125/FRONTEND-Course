@@ -63,7 +63,7 @@ position: relative;
 }
 
 .log-nav li a:hover{
-    color: rgb(230, 76, 140);
+    color: yellow
 }
 
 .log-nav li a{
