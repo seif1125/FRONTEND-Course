@@ -1,8 +1,92 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const data = require("./products.json");
+const arrayofproducts = data.playstations.concat(data.games);
+console.log(arrayofproducts);
+const cartlist=document.getElementsByClassName('cart-hoverlist');
+
+drawCartContainerUi(checkLocalStorage());
+function checkLocalStorage() {
+  if (localStorage.cartproductid) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function drawCartContainerUi(cartContain) {
+  if (cartContain) {
+      
+       getMappedProductCards();
+  } else {
+       console.log("ad");
+  }
+}
+
+function getCartProducts() {
+  const filteredProduct = arrayofproducts.filter((product) => {
+    return localStorage.cartproductid.includes(product.id);
+  });
+
+  return filteredProduct;
+}
+
+function getMappedProductCards() {
+  const mappedProductCards=getCartProducts().map((product) => {
+    return (`
+     <div class="cart-hoverlist-product-item">
+        <div class="cart-hoverlist-product-item-description">
+          <div class="cart-hoverlist-product-item-description-imgcont">
+            <img
+              src=${product.photoalbumurl[0]}
+            />
+          </div>
+          <div class="cart-hoverlist-product-item-description-texts">
+            <h4 class="p-name">${product.name}</h4>
+            <p>${product.description}</p>
+            <div class="cart-hoverlist-product-item-description-purchasedetail">
+              <span> ${product.price.finalprice}</span>
+              <div class="quantitychange">
+                <span> Quantity: </span>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value=${getquantity(product.id)}
+                  min="1"
+                  max="15"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+      
+      `);
+      
+  });
+  console.log(mappedProductCards);
+
+}
+
+function getquantity(productId) {
+    
+    const quantityarrays =localStorage.cartproductquantity.split(",");
+    const productindex=localStorage.cartproductid.split(",").indexOf(productId.toString());
+    const quantity=quantityarrays[productindex].length;
+    console.log(quantity)
+
+    
+    return quantity;
+}
+
+},{"./products.json":2}],2:[function(require,module,exports){
 module.exports={
-  "playstation":
+  "playstations":
   [
-      { "name":"Sony PlayStation 4 Slim ",
+      { 
+        "id":1,
+        "name":"Sony PlayStation 4 Slim ",
         "description":"Sony PlayStation 4 Slim - 500GB Gaming Console - Black + FIFA 20 Standard Edition - Arabic Version Game",
         "brand":"Sony",
         "price":{
@@ -16,7 +100,9 @@ module.exports={
           "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/97/485551/3.jpg?3966"
         ]
 
-    },{"name":"Sony PlayStation 4 pro ",
+    },{
+       "id":2,
+      "name":"Sony PlayStation 4 pro ",
         "description":"Sony PlayStation 4 Pro - 1TB Gaming Console - Black + Extra Controller + Grand Theft Auto V",
         "brand":"Sony",
         "price":{
@@ -29,7 +115,9 @@ module.exports={
         ]
 
 
-    },{"name":"Sony PlayStation 4 slim ",
+    },{
+       "id":3,
+      "name":"Sony PlayStation 4 slim ",
         "description":"Sony PlayStation 4 Slim - 500GB Gaming Console - Black - Region 2",
         "brand":"Sony",
         "price":{
@@ -44,7 +132,9 @@ module.exports={
         ]
 
 
-    },{"name":"Sony PlayStation 4 slim ",
+    },{
+       "id":4,
+      "name":"Sony PlayStation 4 slim ",
         "description":"Sony PlayStation 4 Slim - 500GB Gaming Console - Black - Region 2",
         "brand":"Sony",
         "price":{
@@ -59,7 +149,9 @@ module.exports={
         ]
 
 
-    },{"name":"Sony PlayStation 5 Console ",
+    },{
+       "id":5,
+      "name":"Sony PlayStation 5 Console ",
         "description":"Sony PlayStation 5 Console + Cyberpunk 2077",
         "brand":"Sony",
         "price":{
@@ -77,7 +169,9 @@ module.exports={
   ],
 
   "games":[
-      {"name":"PUBG - PlayerUnknown's Battlegrounds ",
+      {
+         "id":6,
+         "name":"PUBG - PlayerUnknown's Battlegrounds ",
         "description":"Sony Interactive Entertainment PUBG - PlayerUnknown's Battlegrounds Arabic - PS4",
         "brand":"Sony",
         "price":{
@@ -96,46 +190,4 @@ module.exports={
 
   
 }
-},{}],2:[function(require,module,exports){
-const data = require('./products.json');
-
-let productDom=document.querySelector(".products-container");
-console.log(productDom)
-OrganizeDataFromJson(data);
-
-function OrganizeDataFromJson(){
-const playstationArr=data.playstation;
-const gamesArr=data.games;
-const allCategeories=playstationArr.concat(gamesArr)
-console.log(allCategeories)
-return showUiProducts(allCategeories,playstationArr,gamesArr);
-}
-function showUiProducts(allCat,playstationArr,gamesArr){
-  let productsArray= allCat.map(item=>{
-        return `<div class="products-card">
-                     <img class="product-card-img"
-                        src=${item.photoalbumurl[0]}
-                         />
-                    <h3 class="product-card-name">${item.name}</h3>
-                    <p class="product-card-description">${item.description.substr(0,30)}</p>
-                    <span class="product-card-oldprice"><del>${item.price.originalprice+" LE"}</del></span>
-                    <span class="product-card-discount">${"-"+item.price.discount}</span>
-                    <i class="fas fa-heart like"></i>
-                    <br>
-                    <hr>
-                    <span class="product-card-finalprice">${item.price.finalprice+" LE"}</span>
-                    <button class="product-card-add" title="add to cart" value="add to cart">add to cart</button>
-                </div>`
-    })
-
-    productsArray.forEach(product => {
-    productDom.innerHTML+=product;
-    console.log(product)      
-    });
-}
-
-
-
-
-
-},{"./products.json":1}]},{},[2]);
+},{}]},{},[1]);
