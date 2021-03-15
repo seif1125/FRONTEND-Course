@@ -1,5 +1,6 @@
 let allLinks=document.querySelectorAll("a");
 
+
   
 
 if(window.location.href.includes("login.html")){

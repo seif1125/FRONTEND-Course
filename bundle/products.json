@@ -1,0 +1,99 @@
+{
+  "playstations": [
+    {
+      "id": 1,
+      "name": "Sony PlayStation 4 Slim ",
+      "description": "Sony PlayStation 4 Slim - 500GB Gaming Console - Black + FIFA 20 Standard Edition - Arabic Version Game",
+      "brand": "Sony",
+      "price": {
+        "finalprice": 6492,
+        "discount": "28%",
+        "originalprice": 9000
+      },
+      "photoalbumurl": [
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/97/485551/1.jpg?3966",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/97/485551/2.jpg?3966",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/97/485551/3.jpg?3966"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sony PlayStation 4 pro ",
+      "description": "Sony PlayStation 4 Pro - 1TB Gaming Console - Black + Extra Controller + Grand Theft Auto V",
+      "brand": "Sony",
+      "price": {
+        "finalprice": 8949,
+        "discount": "11%",
+        "originalprice": 10000
+      },
+      "photoalbumurl": [
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/75/011071/1.jpg?6401"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sony PlayStation 4 slim ",
+      "description": "Sony PlayStation 4 Slim - 500GB Gaming Console - Black - Region 2",
+      "brand": "Sony",
+      "price": {
+        "finalprice": 6399,
+        "discount": "36%",
+        "originalprice": 10000
+      },
+      "photoalbumurl": [
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/34/530761/1.jpg?6786",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/34/530761/5.jpg?6786",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/34/530761/4.jpg?6786"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sony PlayStation 4 slim ",
+      "description": "Sony PlayStation 4 Slim - 500GB Gaming Console - Black - Region 2",
+      "brand": "Sony",
+      "price": {
+        "finalprice": 6399,
+        "discount": "36%",
+        "originalprice": 10000
+      },
+      "photoalbumurl": [
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/34/530761/1.jpg?6786",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/34/530761/5.jpg?6786",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/34/530761/4.jpg?6786"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Sony PlayStation 5 Console ",
+      "description": "Sony PlayStation 5 Console + Cyberpunk 2077",
+      "brand": "Sony",
+      "price": {
+        "finalprice": 17570,
+        "discount": "16%",
+        "originalprice": 21000
+      },
+      "photoalbumurl": [
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/49/726012/1.jpg?7763",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/49/726012/2.jpg?7763",
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/49/726012/4.jpg?7763"
+      ]
+    }
+  ],
+
+  "games": [
+    {
+      "id": 6,
+      "name": "PUBG - PlayerUnknown's Battlegrounds ",
+      "description": "Sony Interactive Entertainment PUBG - PlayerUnknown's Battlegrounds Arabic - PS4",
+      "brand": "Sony",
+      "price": {
+        "finalprice": 399,
+        "discount": "14%",
+        "originalprice": 456
+      },
+      "photoalbumurl": [
+        "https://eg.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/67/196991/1.jpg?4109"
+      ]
+    }
+  ]
+}
