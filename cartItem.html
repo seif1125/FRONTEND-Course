@@ -3,29 +3,31 @@
   <head>
     <title>SHOPYRIGHT Playstation Store</title>
     <link rel="stylesheet" href="specstyles.css" />
+    <link
+      href="\media\fontawesome-free-5.15.1-web/css/all.css"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
-    <div class="grey-overlay"></div>
     <header>
       <div class="container">
         <div class="right-container">
-          <h1 class="brand" onclick="goToHomePage()">SHOPYRIGHT</h1>
+          <h1 class="brand">SHOPYRIGHT</h1>
         </div>
         <nav class="left-container">
           <ul class="log-nav">
             <li>
-              <a href="login.html" title="login"> login </a>
-            </li>
-            <li>
-              <a href="register.html" title="register"> Register </a>
+              <i class="fas fa-user fa-2x"></i>
+              <span id="user">user</span>
             </li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <script src="script.js"></script>
+    <div class="cart-hoverlist">
+    </div>
   </body>
+  <script src="./bundle/bundlecart.js"></script>
 </html>
